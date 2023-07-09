@@ -3,7 +3,7 @@ var equation = '';
 const screen = document.getElementById("screen");
 
 const buttons = (value) => {
-    if(screen.innerHTML == 'ERROR') {
+    if(screen.innerHTML == 'ERROR' || screen.innerHTML == 'NaN') {
         equation = '';
         screen.innerHTML = '';
         par = true;
@@ -28,7 +28,7 @@ const buttons = (value) => {
             }
         break;
         case '*':
-            if(equation.substring(equation.length - 1) == '+' || equation.substring(equation.length - 1) == '-' || equation.substring(equation.length - 1) == '*' || equation.substring(equation.length - 1) == '/' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '%' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '√' || screen.innerHTML.substring(screen.innerHTML.length - 1) == 'π' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '^' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '!') {
+            if(equation.substring(equation.length - 1) == '+' || equation.substring(equation.length - 1) == '-' || equation.substring(equation.length - 1) == '*' || equation.substring(equation.length - 1) == '/' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '%' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '√' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '^' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '!') {
                 equation = equation.substring(0, equation.length - 1);
                 screen.innerHTML = screen.innerHTML.substring(0, screen.innerHTML.length - 1);
             }
@@ -36,7 +36,7 @@ const buttons = (value) => {
             screen.innerHTML += 'x';
         break;
         case '/':
-            if(equation.substring(equation.length - 1) == '+' || equation.substring(equation.length - 1) == '-' || equation.substring(equation.length - 1) == '*' || equation.substring(equation.length - 1) == '/' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '%' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '√' || screen.innerHTML.substring(screen.innerHTML.length - 1) == 'π' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '^' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '!') {
+            if(equation.substring(equation.length - 1) == '+' || equation.substring(equation.length - 1) == '-' || equation.substring(equation.length - 1) == '*' || equation.substring(equation.length - 1) == '/' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '%' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '√' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '^' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '!') {
                 equation = equation.substring(0, equation.length - 1);
                 screen.innerHTML = screen.innerHTML.substring(0, screen.innerHTML.length - 1);
             }
@@ -57,7 +57,7 @@ const buttons = (value) => {
             }
         break;
         case '%':
-            if(equation.substring(equation.length - 1) == '+' || equation.substring(equation.length - 1) == '-' || equation.substring(equation.length - 1) == '*' || equation.substring(equation.length - 1) == '/' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '%' || screen.innerHTML.substring(0, screen.innerHTML.length - 1) == '√' || screen.innerHTML.substring(screen.innerHTML.length - 1) == 'π' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '^' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '!') {
+            if(equation.substring(equation.length - 1) == '+' || equation.substring(equation.length - 1) == '-' || equation.substring(equation.length - 1) == '*' || equation.substring(equation.length - 1) == '/' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '%' || screen.innerHTML.substring(0, screen.innerHTML.length - 1) == '√' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '^' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '!') {
                 equation = equation.substring(0, equation.length - 1);
                 screen.innerHTML = screen.innerHTML.substring(0, screen.innerHTML.length - 1);
             }
@@ -74,7 +74,7 @@ const buttons = (value) => {
             equation = equation.substring(0, equation.length - 1);
         break;
         case '√':
-            if(equation.substring(equation.length - 1) == '+' || equation.substring(equation.length - 1) == '-' || equation.substring(equation.length - 1) == '*' || equation.substring(equation.length - 1) == '/' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '%' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '√' || screen.innerHTML.substring(screen.innerHTML.length - 1) == 'π' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '^' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '!') {
+            if(equation.substring(equation.length - 1) == '+' || equation.substring(equation.length - 1) == '-' || equation.substring(equation.length - 1) == '*' || equation.substring(equation.length - 1) == '/' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '%' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '√' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '^' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '!') {
                 screen.innerHTML = screen.innerHTML.substring(0, screen.innerHTML.length - 1);
                 equation = equation.substring(0, equation.length - 1);
             }
@@ -88,7 +88,7 @@ const buttons = (value) => {
                 equation+=value;
                 screen.innerHTML += value;
             } else {
-                if(equation.substring(equation.length - 1) == '+' || equation.substring(equation.length - 1) == '-' || equation.substring(equation.length - 1) == '*' || equation.substring(equation.length - 1) == '/' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '%' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '√' || screen.innerHTML.substring(screen.innerHTML.length - 1) == 'π' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '^' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '!') {
+                if(equation.substring(equation.length - 1) == '+' || equation.substring(equation.length - 1) == '-' || equation.substring(equation.length - 1) == '*' || equation.substring(equation.length - 1) == '/' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '%' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '√' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '^' || screen.innerHTML.substring(screen.innerHTML.length - 1) == '!') {
                     screen.innerHTML = screen.innerHTML.substring(0, screen.innerHTML.length - 1);
                     equation = equation.substring(0, equation.length - 1);
                     
