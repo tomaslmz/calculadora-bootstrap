@@ -34,21 +34,22 @@
         .number {
             font-size: 3em;
         }
-
-        ::-webkit-scrollbar {
-            width: 0;
-            height: 0;
-        }
     </style>
 </head>
 <body class="d-flex justify-content align-items-center bg-secondary">
     <main class="container col-xl-5 col-lg-5 bg-light shadow-lg p-5 rounded">
-        <section class="container-fluid border border-black border-3 h100 rounded d-flex align-items-center justify-content-end overflow-scroll">
+        <section class="container-fluid border border-black border-3 h100 rounded d-flex align-items-center justify-content-end overflow-auto">
             <h1 class="number" id="screen"></h1>
         </section>
         <section class="d-flex flex-column justify-content-center">
             <section class="grid mt-5 buttons">
-                <div class="row justify-content-center gap-2">
+                <div class="row justify-content-center gap-2 mt-2">
+                    <button class="btn btn-dark col-2" onclick="buttons('√')">√</button>
+                    <button class="btn btn-dark col-2" onclick="buttons('π')">π</button>
+                    <button class="btn btn-dark col-2" onclick="buttons('^')">^</button>
+                    <button class="btn btn-dark col-2" onclick="buttons('!')">!</button>
+                </div>
+                <div class="row justify-content-center gap-2 mt-2">
                     <button class="btn btn-dark col-2" onclick="buttons('AC')">AC</button>
                     <button class="btn btn-dark col-2" onclick="buttons('()')">( )</button>
                     <button class="btn btn-dark col-2" onclick="buttons('%')">%</button>
@@ -58,7 +59,7 @@
                     <button class="btn btn-dark col-2" onclick="buttons(7)">7</button>
                     <button class="btn btn-dark col-2" onclick="buttons(8)">8</button>
                     <button class="btn btn-dark col-2" onclick="buttons(9)">9</button>
-                    <button class="btn btn-dark col-2" onclick="buttons('*')">X</button>
+                    <button class="btn btn-dark col-2" onclick="buttons('*')">x</button>
                 </div>
                 <div class="row justify-content-center gap-2 mt-2">
                     <button class="btn btn-dark col-2" onclick="buttons(4)">4</button>
